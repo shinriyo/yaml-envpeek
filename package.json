@@ -9,7 +9,9 @@
   "categories": [
     "Other"
   ],
-  "activationEvents": [],
+  "activationEvents": [
+    "onLanguage:yaml"
+  ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
@@ -17,7 +19,8 @@
         "command": "yaml-envpeek.helloWorld",
         "title": "Hello World"
       }
-    ]
+    ],
+    "languages": [{ "id": "yaml", "extensions": [".yaml", ".yml"] }]
   },
   "scripts": {
     "vscode:prepublish": "npm run package",

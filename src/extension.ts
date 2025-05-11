@@ -1,26 +1,57 @@
-// The module 'vscode' contains the VS Code extensibility API
-// Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
+import * as fs from 'fs';
+import * as path from 'path';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+  const hoverProvider = vscode.languages.registerHoverProvider(
+    { language: 'yaml', scheme: 'file' },   // YAML だけに限定
+    {
+      async provideHover(document, position) {
+        // `${hoge}` または `${env:hoge}` パターンの範囲を取得
+        const range = document.getWordRangeAtPosition(position, /\$\{(?:env:)?\w+\}/);
+        if (!range) {return;}
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "yaml-envpeek" is now active!');
+        const token = document.getText(range).slice(2, -1); // ${ } を取り除く
+        const envPrefix = 'env:';
+        const actualToken = token.startsWith(envPrefix) ? token.slice(envPrefix.length) : token;
 
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with registerCommand
-	// The commandId parameter must match the command field in package.json
-	const disposable = vscode.commands.registerCommand('yaml-envpeek.helloWorld', () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from yaml-envpeek!');
-	});
+        // 元ファイルのあるディレクトリからルートへ
+        const roots = vscode.workspace.workspaceFolders?.map(f => f.uri.fsPath) ?? [];
+        let dir = path.dirname(document.uri.fsPath);
 
-	context.subscriptions.push(disposable);
+        while (true) {
+          const files = await vscode.workspace.fs.readDirectory(vscode.Uri.file(dir));
+          for (const [name, type] of files) {
+            if (
+              type === vscode.FileType.File &&
+              /^\..*env$/.test(name)             // .xxxenv にマッチ
+            ) {
+              const fullPath = path.join(dir, name);
+              const lines = fs.readFileSync(fullPath, 'utf8').split(/\r?\n/);
+              for (const line of lines) {
+                const m = line.match(/^([^=]+)=(.*)$/);
+                if (m && m[1] === actualToken) {
+                  const value = m[2];
+                  return new vscode.Hover(
+                    new vscode.MarkdownString(
+                      `\`${actualToken}\` → **${value}**  \n*(from \`${name}\`)*`
+                    )
+                  );
+                }
+              }
+            }
+          }
+
+          // ルートまで来たら終了
+          if (roots.includes(dir) || path.dirname(dir) === dir) {break;}
+          dir = path.dirname(dir);
+        }
+        return;
+      },
+    }
+  );
+
+  context.subscriptions.push(hoverProvider);
 }
 
-// This method is called when your extension is deactivated
 export function deactivate() {}
