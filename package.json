@@ -3,6 +3,7 @@
   "displayName": "YAML-EnvPeek",
   "description": "Peek .env variables inside YAML files",
   "version": "0.1.0",
+  "publisher": "shinriyo",
   "icon": "images/icon.png",
   "repository": {
     "type": "git",
