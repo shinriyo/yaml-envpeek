@@ -15,12 +15,6 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "yaml-envpeek.helloWorld",
-        "title": "Hello World"
-      }
-    ],
     "languages": [{ "id": "yaml", "extensions": [".yaml", ".yml"] }]
   },
   "scripts": {
