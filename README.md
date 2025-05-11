@@ -1,53 +1,68 @@
-# yaml-envpeek README
+# YAML-EnvPeek
 
-This is the README for your extension "yaml-envpeek". After writing up a brief description, we recommend including the following sections.
+A Visual Studio Code extension that provides environment variable peeking functionality for YAML files.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Environment Variable Hover**: Hover over `${VARIABLE_NAME}` or `${env:VARIABLE_NAME}` in YAML files to see the actual value from your `.env` files
+- **Definition Navigation**: 
+  - Command+Click (Mac) or Ctrl+Click (Windows/Linux) on environment variables to jump to their definitions
+  - Click on the file path in the hover message to open the definition file
+- **Multiple .env File Support**: Searches for environment variables in all `.env` files (including `.xxxenv`) from the current directory up to the workspace root
+- **Clear Feedback**: Shows a warning message when an environment variable is not found
 
-For example if there is an image subfolder under your extension project workspace:
+## Usage
 
-\!\[feature X\]\(images/feature-x.png\)
+1. Open a YAML file containing environment variable references
+2. Hover over `${VARIABLE_NAME}` or `${env:VARIABLE_NAME}` to see the value
+3. Use Command+Click (Mac) or Ctrl+Click (Windows/Linux) to jump to the definition
+4. Click on the file path in the hover message to open the definition file
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Example
+
+```yaml
+environment:
+  DATABASE_URL: ${DATABASE_URL}
+  API_KEY: ${env:API_KEY}
+```
+
+Hovering over `${DATABASE_URL}` will show:
+```
+DATABASE_URL → postgresql://localhost:5432/mydb
+(from .env)
+```
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- Visual Studio Code 1.100.0 or higher
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+* `yaml-envpeek.enable`: Enable/disable this extension
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+None at the moment.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.0.1
 
-### 1.0.0
+Initial release of YAML-EnvPeek:
+- Basic environment variable hovering
+- Definition navigation
+- Multiple .env file support
+- Clear feedback for undefined variables
 
-Initial release of ...
+## Contributing
 
-### 1.0.1
+Feel free to open issues or submit pull requests on GitHub.
 
-Fixed issue #.
+## License
 
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
+This extension is licensed under the MIT License.
 
 ## Following extension guidelines
 
