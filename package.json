@@ -2,7 +2,8 @@
   "name": "yaml-envpeek",
   "displayName": "YAML-EnvPeek",
   "description": "Peek .env variables inside YAML files",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.100.0"
   },
