@@ -4,6 +4,10 @@
   "description": "Peek .env variables inside YAML files",
   "version": "0.1.0",
   "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinriyo/yaml-envpeek"
+  },
   "engines": {
     "vscode": "^1.100.0"
   },
