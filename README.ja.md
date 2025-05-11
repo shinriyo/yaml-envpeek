@@ -48,7 +48,7 @@ DATABASE_URL → postgresql://localhost:5432/mydb
 
 ## リリースノート
 
-### 0.0.1
+### 0.1.0
 
 YAML-EnvPeekの初期リリース：
 - 基本的な環境変数のホバー表示

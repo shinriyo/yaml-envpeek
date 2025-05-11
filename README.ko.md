@@ -48,7 +48,7 @@ DATABASE_URL → postgresql://localhost:5432/mydb
 
 ## 릴리스 노트
 
-### 0.0.1
+### 0.1.0
 
 YAML-EnvPeek 초기 릴리스:
 - 기본 환경 변수 호버 표시

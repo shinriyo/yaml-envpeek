@@ -48,7 +48,7 @@ Hal-hazırda yoxdur.
 
 ## Buraxılış Qeydləri
 
-### 0.0.1
+### 0.1.0
 
 YAML-EnvPeek-in ilk buraxılışı:
 - Əsas mühit dəyişənləri hover funksionallığı

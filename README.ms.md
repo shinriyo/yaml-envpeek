@@ -48,7 +48,7 @@ Tiada pada masa ini.
 
 ## Nota Pelepasan
 
-### 0.0.1
+### 0.1.0
 
 Pelepasan awal YAML-EnvPeek:
 - Fungsi hover pembolehubah persekitaran asas

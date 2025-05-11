@@ -48,7 +48,7 @@ DATABASE_URL → postgresql://localhost:5432/mydb
 
 ## یادداشت‌های انتشار
 
-### 0.0.1
+### 0.1.0
 
 نسخه اولیه YAML-EnvPeek:
 - نمایش hover پایه متغیرهای محیطی

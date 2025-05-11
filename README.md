@@ -48,7 +48,7 @@ None at the moment.
 
 ## Release Notes
 
-### 0.0.1
+### 0.1.0
 
 Initial release of YAML-EnvPeek:
 - Basic environment variable hovering

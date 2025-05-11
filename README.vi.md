@@ -48,7 +48,7 @@ Hiện tại không có vấn đề nào.
 
 ## Ghi chú Phát hành
 
-### 0.0.1
+### 0.1.0
 
 Phiên bản đầu tiên của YAML-EnvPeek:
 - Hiển thị hover biến môi trường cơ bản

@@ -48,7 +48,7 @@ Tidak ada saat ini.
 
 ## Catatan Rilis
 
-### 0.0.1
+### 0.1.0
 
 Rilis awal YAML-EnvPeek:
 - Fungsi hover variabel lingkungan dasar

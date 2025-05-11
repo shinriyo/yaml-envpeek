@@ -48,7 +48,7 @@ DATABASE_URL → postgresql://localhost:5432/mydb
 
 ## 发行说明
 
-### 0.0.1
+### 0.1.0
 
 YAML-EnvPeek的初始版本：
 - 基本环境变量悬停显示
