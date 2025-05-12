@@ -48,6 +48,12 @@ Tidak ada saat ini.
 
 ## Catatan Rilis
 
+### 0.2.0
+
+- Menambahkan dukungan dokumentasi multibahasa (Bahasa Inggris, Bahasa Jepang, Bahasa Korea, Bahasa Mandarin, Bahasa Azerbaijan, Bahasa Persia, Bahasa Vietnam, Bahasa Melayu, Bahasa Indonesia)
+- Menambahkan ikon ekstensi
+- Meningkatkan kompatibilitas dengan VS Code 1.96.0 dan di atasnya
+
 ### 0.1.0
 
 Rilis awal YAML-EnvPeek:

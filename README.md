@@ -48,6 +48,12 @@ None at the moment.
 
 ## Release Notes
 
+### 0.2.0
+
+- Added support for multiple language documentation (English, Japanese, Korean, Chinese, Azerbaijani, Persian, Vietnamese, Malay, Indonesian)
+- Added extension icon
+- Improved compatibility with VS Code 1.96.0 and above
+
 ### 0.1.0
 
 Initial release of YAML-EnvPeek:

@@ -2,7 +2,7 @@
   "name": "yaml-envpeek",
   "displayName": "YAML-EnvPeek",
   "description": "Peek .env variables inside YAML files",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "shinriyo",
   "icon": "images/icon.png",
   "repository": {
