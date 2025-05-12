@@ -48,6 +48,12 @@ Hal-hazırda yoxdur.
 
 ## Buraxılış Qeydləri
 
+### 0.2.0
+
+- Çoxdilli sənədlərin dəstəyi əlavə edildi (İngiliscə, Yaponca, Koreyaca, Çincə, Azərbaycanca, Farsça, Vyetnamca, Malayca, İndoneziya dili)
+- Genişlənmə ikonu əlavə edildi
+- VS Code 1.96.0 və daha yüksək versiyaları ilə uyğunluq təkmilləşdirildi
+
 ### 0.1.0
 
 YAML-EnvPeek-in ilk buraxılışı:

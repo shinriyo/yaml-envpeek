@@ -48,6 +48,12 @@ Hiện tại không có vấn đề nào.
 
 ## Ghi chú Phát hành
 
+### 0.2.0
+
+- Thêm hỗ trợ tài liệu đa ngôn ngữ (Tiếng Anh, Tiếng Nhật, Tiếng Hàn, Tiếng Trung, Tiếng Azerbaijan, Tiếng Ba Tư, Tiếng Việt, Tiếng Mã Lai, Tiếng Indonesia)
+- Thêm biểu tượng tiện ích mở rộng
+- Cải thiện khả năng tương thích với VS Code 1.96.0 trở lên
+
 ### 0.1.0
 
 Phiên bản đầu tiên của YAML-EnvPeek:

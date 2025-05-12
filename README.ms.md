@@ -48,6 +48,12 @@ Tiada pada masa ini.
 
 ## Nota Pelepasan
 
+### 0.2.0
+
+- Menambah sokongan dokumentasi pelbagai bahasa (Bahasa Inggeris, Bahasa Jepun, Bahasa Korea, Bahasa Cina, Bahasa Azerbaijan, Bahasa Parsi, Bahasa Vietnam, Bahasa Melayu, Bahasa Indonesia)
+- Menambah ikon sambungan
+- Meningkatkan keserasian dengan VS Code 1.96.0 dan ke atas
+
 ### 0.1.0
 
 Pelepasan awal YAML-EnvPeek:
